@@ -112,9 +112,9 @@
             this.Login.Location = new System.Drawing.Point(8, 88);
             this.Login.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(108, 26);
+            this.Login.Size = new System.Drawing.Size(72, 26);
             this.Login.TabIndex = 2;
-            this.Login.Text = "IdNumber";
+            this.Login.Text = "Логин";
             // 
             // Password
             // 
@@ -123,9 +123,9 @@
             this.Password.Location = new System.Drawing.Point(8, 138);
             this.Password.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(108, 26);
+            this.Password.Size = new System.Drawing.Size(89, 26);
             this.Password.TabIndex = 3;
-            this.Password.Text = "Password";
+            this.Password.Text = "Пароль";
             // 
             // panel2
             // 

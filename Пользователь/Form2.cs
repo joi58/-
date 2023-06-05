@@ -40,5 +40,10 @@ namespace Пользователь
         {
 
         }
+
+        private void RepeatPassField_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
