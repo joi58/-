@@ -43,16 +43,20 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.BackButton = new System.Windows.Forms.Button();
-            this.RepeatPassField = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.RepeatPass = new System.Windows.Forms.Label();
+            this.RepeatPassField = new System.Windows.Forms.TextBox();
+            this.Date = new System.Windows.Forms.Label();
+            this.DateField = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.DateField);
+            this.panel1.Controls.Add(this.Date);
             this.panel1.Controls.Add(this.RepeatPassField);
+            this.panel1.Controls.Add(this.RepeatPass);
             this.panel1.Controls.Add(this.ButtonRegister);
             this.panel1.Controls.Add(this.PassField);
             this.panel1.Controls.Add(this.LogField);
@@ -76,7 +80,7 @@
             // ButtonRegister
             // 
             this.ButtonRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ButtonRegister.Location = new System.Drawing.Point(87, 219);
+            this.ButtonRegister.Location = new System.Drawing.Point(87, 271);
             this.ButtonRegister.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonRegister.Name = "ButtonRegister";
             this.ButtonRegister.Size = new System.Drawing.Size(122, 30);
@@ -87,7 +91,7 @@
             // 
             // PassField
             // 
-            this.PassField.Location = new System.Drawing.Point(133, 164);
+            this.PassField.Location = new System.Drawing.Point(133, 213);
             this.PassField.Margin = new System.Windows.Forms.Padding(2);
             this.PassField.Name = "PassField";
             this.PassField.Size = new System.Drawing.Size(192, 24);
@@ -95,7 +99,7 @@
             // 
             // LogField
             // 
-            this.LogField.Location = new System.Drawing.Point(133, 138);
+            this.LogField.Location = new System.Drawing.Point(133, 181);
             this.LogField.Margin = new System.Windows.Forms.Padding(2);
             this.LogField.Name = "LogField";
             this.LogField.Size = new System.Drawing.Size(192, 24);
@@ -104,7 +108,7 @@
             // 
             // MiddField
             // 
-            this.MiddField.Location = new System.Drawing.Point(133, 118);
+            this.MiddField.Location = new System.Drawing.Point(133, 121);
             this.MiddField.Margin = new System.Windows.Forms.Padding(2);
             this.MiddField.Name = "MiddField";
             this.MiddField.Size = new System.Drawing.Size(192, 24);
@@ -130,7 +134,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(8, 170);
+            this.label6.Location = new System.Drawing.Point(12, 219);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(61, 18);
@@ -141,7 +145,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(8, 144);
+            this.label5.Location = new System.Drawing.Point(12, 187);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 18);
@@ -152,7 +156,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(8, 121);
+            this.label4.Location = new System.Drawing.Point(12, 127);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 18);
@@ -163,7 +167,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(8, 96);
+            this.label3.Location = new System.Drawing.Point(12, 99);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 18);
@@ -174,7 +178,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(11, 73);
+            this.label2.Location = new System.Drawing.Point(12, 73);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 18);
@@ -218,22 +222,38 @@
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
+            // RepeatPass
+            // 
+            this.RepeatPass.AutoSize = true;
+            this.RepeatPass.Location = new System.Drawing.Point(12, 248);
+            this.RepeatPass.Name = "RepeatPass";
+            this.RepeatPass.Size = new System.Drawing.Size(94, 18);
+            this.RepeatPass.TabIndex = 12;
+            this.RepeatPass.Text = "Пов. пароль";
+            this.RepeatPass.Click += new System.EventHandler(this.RepeatPassField_Click);
+            // 
             // RepeatPassField
             // 
-            this.RepeatPassField.AutoSize = true;
-            this.RepeatPassField.Location = new System.Drawing.Point(8, 196);
+            this.RepeatPassField.Location = new System.Drawing.Point(133, 242);
             this.RepeatPassField.Name = "RepeatPassField";
-            this.RepeatPassField.Size = new System.Drawing.Size(94, 18);
-            this.RepeatPassField.TabIndex = 12;
-            this.RepeatPassField.Text = "Пов. пароль";
-            this.RepeatPassField.Click += new System.EventHandler(this.RepeatPassField_Click);
+            this.RepeatPassField.Size = new System.Drawing.Size(192, 24);
+            this.RepeatPassField.TabIndex = 13;
             // 
-            // textBox1
+            // Date
             // 
-            this.textBox1.Location = new System.Drawing.Point(133, 190);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 24);
-            this.textBox1.TabIndex = 13;
+            this.Date.AutoSize = true;
+            this.Date.Location = new System.Drawing.Point(12, 155);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(116, 18);
+            this.Date.TabIndex = 14;
+            this.Date.Text = "Дата рождения";
+            // 
+            // DateField
+            // 
+            this.DateField.Location = new System.Drawing.Point(133, 152);
+            this.DateField.Name = "DateField";
+            this.DateField.Size = new System.Drawing.Size(192, 24);
+            this.DateField.TabIndex = 15;
             // 
             // Form2
             // 
@@ -270,7 +290,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ButtonRegister;
-        private System.Windows.Forms.Label RepeatPassField;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label RepeatPass;
+        private System.Windows.Forms.TextBox RepeatPassField;
+        private System.Windows.Forms.TextBox DateField;
+        private System.Windows.Forms.Label Date;
     }
 }
