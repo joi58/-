@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BirthDateField = new System.Windows.Forms.TextBox();
+            this.Date = new System.Windows.Forms.Label();
+            this.RepeatPassField = new System.Windows.Forms.TextBox();
+            this.RepeatPass = new System.Windows.Forms.Label();
             this.ButtonRegister = new System.Windows.Forms.Button();
             this.PassField = new System.Windows.Forms.TextBox();
             this.LogField = new System.Windows.Forms.TextBox();
@@ -43,17 +47,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.BackButton = new System.Windows.Forms.Button();
-            this.RepeatPass = new System.Windows.Forms.Label();
-            this.RepeatPassField = new System.Windows.Forms.TextBox();
-            this.Date = new System.Windows.Forms.Label();
-            this.DateField = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.DateField);
+            this.panel1.Controls.Add(this.BirthDateField);
             this.panel1.Controls.Add(this.Date);
             this.panel1.Controls.Add(this.RepeatPassField);
             this.panel1.Controls.Add(this.RepeatPass);
@@ -76,6 +76,39 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(325, 341);
             this.panel1.TabIndex = 0;
+            // 
+            // BirthDateField
+            // 
+            this.BirthDateField.Location = new System.Drawing.Point(133, 152);
+            this.BirthDateField.Name = "BirthDateField";
+            this.BirthDateField.Size = new System.Drawing.Size(192, 24);
+            this.BirthDateField.TabIndex = 15;
+            // 
+            // Date
+            // 
+            this.Date.AutoSize = true;
+            this.Date.Location = new System.Drawing.Point(12, 155);
+            this.Date.Name = "Date";
+            this.Date.Size = new System.Drawing.Size(116, 18);
+            this.Date.TabIndex = 14;
+            this.Date.Text = "Дата рождения";
+            // 
+            // RepeatPassField
+            // 
+            this.RepeatPassField.Location = new System.Drawing.Point(133, 242);
+            this.RepeatPassField.Name = "RepeatPassField";
+            this.RepeatPassField.Size = new System.Drawing.Size(192, 24);
+            this.RepeatPassField.TabIndex = 13;
+            // 
+            // RepeatPass
+            // 
+            this.RepeatPass.AutoSize = true;
+            this.RepeatPass.Location = new System.Drawing.Point(12, 248);
+            this.RepeatPass.Name = "RepeatPass";
+            this.RepeatPass.Size = new System.Drawing.Size(94, 18);
+            this.RepeatPass.TabIndex = 12;
+            this.RepeatPass.Text = "Пов. пароль";
+            this.RepeatPass.Click += new System.EventHandler(this.RepeatPassField_Click);
             // 
             // ButtonRegister
             // 
@@ -222,39 +255,6 @@
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
-            // RepeatPass
-            // 
-            this.RepeatPass.AutoSize = true;
-            this.RepeatPass.Location = new System.Drawing.Point(12, 248);
-            this.RepeatPass.Name = "RepeatPass";
-            this.RepeatPass.Size = new System.Drawing.Size(94, 18);
-            this.RepeatPass.TabIndex = 12;
-            this.RepeatPass.Text = "Пов. пароль";
-            this.RepeatPass.Click += new System.EventHandler(this.RepeatPassField_Click);
-            // 
-            // RepeatPassField
-            // 
-            this.RepeatPassField.Location = new System.Drawing.Point(133, 242);
-            this.RepeatPassField.Name = "RepeatPassField";
-            this.RepeatPassField.Size = new System.Drawing.Size(192, 24);
-            this.RepeatPassField.TabIndex = 13;
-            // 
-            // Date
-            // 
-            this.Date.AutoSize = true;
-            this.Date.Location = new System.Drawing.Point(12, 155);
-            this.Date.Name = "Date";
-            this.Date.Size = new System.Drawing.Size(116, 18);
-            this.Date.TabIndex = 14;
-            this.Date.Text = "Дата рождения";
-            // 
-            // DateField
-            // 
-            this.DateField.Location = new System.Drawing.Point(133, 152);
-            this.DateField.Name = "DateField";
-            this.DateField.Size = new System.Drawing.Size(192, 24);
-            this.DateField.TabIndex = 15;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,7 +292,7 @@
         private System.Windows.Forms.Button ButtonRegister;
         private System.Windows.Forms.Label RepeatPass;
         private System.Windows.Forms.TextBox RepeatPassField;
-        private System.Windows.Forms.TextBox DateField;
+        private System.Windows.Forms.TextBox BirthDateField;
         private System.Windows.Forms.Label Date;
     }
 }
